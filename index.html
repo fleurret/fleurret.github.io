@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="js">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>ROSE YING</title>
 		<meta name="author" content="Rose Ying" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Serif Text">
 		<link rel="stylesheet" type="text/css" href="assets/css/base.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("This browser does not support CSS Variables.");
+		</script>
 	</head>
 
 
 
 	<body>
 		<main>
+			<h1 class = "frame__title">Rose Ying</h1>
 			<nav class="menu">
 				<a class="menu__item" href="#">about</a>
 				<a class="menu__item" href="#">publications</a>
@@ -29,5 +33,11 @@
 			</defs>
 			<circle class="cursor__inner" cx="60" cy="60" r="20"/>
 		</svg>
+		<svg class="cursor" width="120" height="120" viewBox="0 0 120 120" data-amt="0.1">
+			<circle class="cursor__inner" cx="60" cy="60" r="20"/>
+		</svg>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="assets/js/index.js"></script>
 	</body>
