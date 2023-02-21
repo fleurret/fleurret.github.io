@@ -12,7 +12,7 @@ body {
 	margin: 0;
 	--color-text: #919191;
     --color-text-alt: #747474;
-    --color-bg: #eaeaea;
+    --color-bg: #90b2a3;
     --color-link: #000000;
     --color-link-hover: #104ed6;
     color: var(--color-text);
@@ -89,7 +89,7 @@ main {
 	place-items: center;
 	align-self: center;
 	grid-gap: 7vw;
-	font-size: 2rem;
+	font-size: 0.8rem;
 	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
 	
 }
