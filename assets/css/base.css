@@ -74,9 +74,9 @@ main {
 
 .frame__title {
 	--color-text: #ffffff;
-	font-family: DM Serif Text, serif;
+	font-family: Bakbak One, sans-serif;
 	font-size: 8rem;
-	font-weight: 700;
+	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 }
 
