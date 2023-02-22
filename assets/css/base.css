@@ -102,7 +102,7 @@ section {
 	font-family: "Archivo", sans serif;
 	height: 100vh;
 	scroll-snap-align: start;
-	padding: 0 15vh;
+	padding: 0 10vh;
 	background-size: cover;
 }
 
@@ -152,6 +152,10 @@ a {
 	
 	h1 {
 		font-size: 4vw;
+	}
+
+	section {
+		padding: 0 15vh;
 	}
 
 @media (any-pointer:fine) {
