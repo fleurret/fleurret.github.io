@@ -82,6 +82,10 @@ h1 {
 	font-family: "Archivo", sans serif;
 }
 
+.menu a {
+	text-decoration: none;
+}
+
 .wrapper {
 	height: 100vh;
   	scroll-snap-type: y mandatory;
@@ -103,6 +107,10 @@ section {
 
 p {
 	text-align: justify;
+}
+
+a {
+	text-decoration: underline;
 }
 
 .container-top {
