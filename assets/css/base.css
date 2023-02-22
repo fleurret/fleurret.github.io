@@ -98,11 +98,24 @@ section {
 	flex-flow: column wrap;
   	align-items: center;
   	justify-content: center;
-	font-size: min(1.5rem, 3vw);
+	font-size: min(1.5rem, 4vw);
 	font-family: "Archivo", sans serif;
 	height: 100vh;
 	scroll-snap-align: start;
 	padding: 0 15vh;
+	background-size: cover;
+}
+
+#about {
+	background-image: url('../../images/brain.png');
+}
+
+#pubs {
+	background-image: url('../../images/papers.png');
+}
+
+#contact {
+	background-image: url('../../images/roses.png');
 }
 
 p {
