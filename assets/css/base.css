@@ -134,6 +134,7 @@ a {
 
 .return {
   	position: fixed;
+	bottom: 10px;
   	right: 30px;
   	color: #ffffff;
   	padding: 10px;
