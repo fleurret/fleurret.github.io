@@ -108,14 +108,20 @@ section {
 
 #about {
 	background-image: url('../../images/brain.png');
+	transition: 0s linear;
+	transition-property: background-position;
 }
 
 #pubs {
 	background-image: url('../../images/papers.png');
+	transition: 0s linear;
+	transition-property: background-position;
 }
 
 #contact {
 	background-image: url('../../images/roses.png');
+	transition: 0s linear;
+	transition-property: background-position;
 }
 
 p {
