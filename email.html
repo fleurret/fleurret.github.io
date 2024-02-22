@@ -73,8 +73,8 @@ function sendEmail() {
     var subject = document.getElementById('subject').value;
     var message = document.getElementById('message').value;
     var name = document.getElementById('name').value;
-
     var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message + '%0D%0A' + name;
+    var linebreak = message.replace(/\r\n|\r|\n/g, "%0D%0A");
 
         win = window.open(mailto_link, 'emailWindow');
         if (win && win.open && !win.closed) win.close();
@@ -87,6 +87,11 @@ document.getElementById('sender').addEventListener("click", sendEmail);
 </head>
 <body>
 <h1>Tell Provost Rice: Graduate Workers Deserve A Union!</h1>
+
+<p>
+You can edit and review your letter before sending it to Provost Rice.
+</p>
+
 <form>
 <p>
 <h2>Subject:</h2><br>
