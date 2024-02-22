@@ -5,17 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web form</title>
+
+<style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+
+.button{
+  text-align:center;
+  background-color:rgb(255,194,0);
+  padding:10px;
+  margin: 10px auto;
+  width:30%;
+  cursor :pointer;
+}
+
+.user_input{
+  display:block;
+  margin : 50px auto;
+  padding-left:10px;
+  border-radius:5px;
+  border:2px solid rgb(255,194,0);
+  width: 50%;
+  height:30px;
+}
+
+.user_input2{
+  display:block;
+  margin : 50px auto;
+  padding-left:10px;
+  border-radius:5px;
+  border:2px solid rgb(255,194,0);
+  width: 50%;
+  height:500px;
+}
+
+</style>
+
+<script>
+function constructMailTo() {
+    var contactObject = document.getElementById('contact-object').value;
+    var contactName = document.getElementById('contact-name').value;
+
+    var mailto = "mailto:roseying@umd.edu?Subject=Object: " + contactObject + "name: " + contactName;
+
+    // URI escape the link
+    return encodeURI(mailto);
+}
+</script>
+
+<script>
+function insertMailto() {
+    document.getElementById('mailto-element').href = constructMailTo();
+}
+</script>
 </head>
 <body>
 
-<a href="mailto:roseying@umd.edu?subject=Graduate workers need collective bargaining rights&body=Dear Provost Rice,
+<form action="mailto:roseying@umd.edu" method="GET" enctype="text/plain">
+<p>
 
-I was disappointed to learn that graduate workers at Maryland are unable to form a university-recognized union, and that you personally have testified to the Maryland state assembly against union recognition. This is deeply shameful and hypocritical for a university that prides itself on “advancing the public good” and “investing in people and communities.” .
+<input class="user_input" type="text" name="subject" id="contact-subject" placeholder="Graduate Workers Deserve A Union!" onchange="insertMailTo();"
+onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange()/>
+
+<p>
+
+<input class="user_input2" type="text" name="body" id="contact-object" placeholder="Dear Provost Rice,
+
+I was disappointed to learn that graduate workers at Maryland are unable to form a university-recognized union, and that you personally have testified to the Maryland state assembly against union recognition. This is deeply shameful and hypocritical for a university that prides itself on “advancing the public good” and “investing in people and communities.”
 
 Far from remaining neutral and allowing lawmakers and their constituents to change the law as they see fit, you have taken a public stance that flies in the face of our shared values. Your opposition to this democratic, worker-led process goes against the principles that make me proud to be a part of the Maryland community.
 
 I urge you to recognize the graduate workers’ union, or at the very least, to remain neutral in this process.
-">Email Us!</a>
+
+Respectfully," onchange="insertMailTo();"
+onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange()/>
+</p>
+
+<input class="user_input" type="text" name="contact-name" id="contact-name" placeholder="Your name" onchange="insertMailTo();"
+onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange()/>
+  
+<div class="button">
+<a  href="mailto:roseying@umd.edu">send</a>
+</div>
+
+</form>
 
 </body>
 </html>
