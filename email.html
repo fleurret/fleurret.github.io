@@ -14,6 +14,7 @@ body {
 h1 {
   color: maroon;
   margin-left: 40px;
+  text-align:center;
 }
 
 .button{
@@ -48,34 +49,32 @@ h1 {
 </style>
 
 <script>
-function constructMailTo() {
-    var contactObject = document.getElementById('contact-object').value;
-    var contactName = document.getElementById('contact-name').value;
+document.getElementById('sender').addEventListener("click", sendEmail);
 
-    var mailto = "mailto:roseying@umd.edu?Subject=Object: " + contactObject + "name: " + contactName;
+    function sendEmail() {
+    var email = 'roseying@umd.edu';
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+    var name = document.getElementById('name').value;
 
-    // URI escape the link
-    return encodeURI(mailto);
-}
+    var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message + '&name=' + name;
+
+        win = window.open(mailto_link, 'emailWindow');
+        if (win && win.open && !win.closed) win.close();
+
+    }
 </script>
 
-<script>
-function insertMailto() {
-    document.getElementById('mailto-element').href = constructMailTo();
-}
-</script>
 </head>
 <body>
+<h1>Tell Provost Rice: Graduate Workers Deserve A Union!</h1>
+<form>
+<p>
+<input class="user_input" type="text" id="subject" placeholder="Graduate Workers Deserve A Union!">
 
-<form action="mailto:roseying@umd.edu" method="GET" enctype="text/plain">
 <p>
 
-<input class="user_input" type="text" name="subject" id="contact-subject" placeholder="Graduate Workers Deserve A Union!" onchange="insertMailTo();"
-onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange()/>
-
-<p>
-
-<input class="user_input2" type="text" name="body" id="contact-object" placeholder="Dear Provost Rice,
+<input class="user_input2" type="text" id="message" placeholder="Dear Provost Rice,
 
 I was disappointed to learn that graduate workers at Maryland are unable to form a university-recognized union, and that you personally have testified to the Maryland state assembly against union recognition. This is deeply shameful and hypocritical for a university that prides itself on “advancing the public good” and “investing in people and communities.”
 
@@ -83,16 +82,12 @@ Far from remaining neutral and allowing lawmakers and their constituents to chan
 
 I urge you to recognize the graduate workers’ union, or at the very least, to remain neutral in this process.
 
-Respectfully," onchange="insertMailTo();"
-onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange()/>
+Respectfully,"/>
 </p>
 
-<input class="user_input" type="text" name="contact-name" id="contact-name" placeholder="Your name" onchange="insertMailTo();"
-onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange()/>
+<input class="user_input" type="text" id="name" placeholder="Your name"/>
   
-<div class="button">
-<a  href="mailto:roseying@umd.edu">send</a>
-</div>
+<button id="sender">Send email</button>
 
 </form>
 
