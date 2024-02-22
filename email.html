@@ -64,7 +64,7 @@ function sendEmail() {
     var message = document.getElementById('message').value;
     var name = document.getElementById('name').value;
 
-    var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message;
+    var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message + '%0D%0A' + name;
 
         win = window.open(mailto_link, 'emailWindow');
         if (win && win.open && !win.closed) win.close();
@@ -100,13 +100,10 @@ Respectfully,
 <input class="user_input" type="text" id="name" placeholder="Your name" required/>
 </p>
 
-<div id ="sender">
-<button class="button">Send email!</button>
-</div>
-
-<a href='#' onclick='sendEmail()' >
-  <button>Click To Accept</button>
+<a onclick='sendEmail()'>
+<button class="button" id="sender">Send email!</button>
 </a>
+
 
 </form>
 
