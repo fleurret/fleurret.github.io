@@ -17,7 +17,6 @@ body {
 h1 {
   font-family: "Montserrat", sans-serif;
   color: maroon;
-  margin-left: 40px;
   text-align:center;
 }
 
@@ -42,7 +41,7 @@ h1 {
   padding-left: 10px;
   border-radius: 5px;
   border: 2px solid rgb(255,194,0);
-  width: 50%;
+  width: 80%;
   height: 30px;
 }
 
@@ -54,16 +53,14 @@ h1 {
   padding-left: 10px;
   border-radius: 5px;
   border: 2px solid rgb(255,194,0);
-  width: 50%;
+  width: 80%;
   height: 500px;
 }
 
 </style>
 
 <script>
-document.getElementById('sender').addEventListener("click", sendEmail);
-
-    function sendEmail() {
+function sendEmail() {
     var email = 'roseying@umd.edu';
     var subject = document.getElementById('subject').value;
     var message = document.getElementById('message').value;
@@ -73,8 +70,9 @@ document.getElementById('sender').addEventListener("click", sendEmail);
 
         win = window.open(mailto_link, 'emailWindow');
         if (win && win.open && !win.closed) win.close();
-
     }
+
+document.getElementById('sender').addEventListener("click", sendEmail);
 </script>
 
 </head>
@@ -100,7 +98,9 @@ Respectfully,
 
 <input class="user_input" type="text" id="name" placeholder="Your name" required/>
   
+
 <button class="button" id="sender">Send email</button>
+</a>
 
 </form>
 
