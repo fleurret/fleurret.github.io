@@ -12,6 +12,7 @@
 body {
   background-color: linen;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 
 h1 {
@@ -28,9 +29,6 @@ h1 {
   padding: 10px;
   width: 30%;
   position: relative;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .user_input{
@@ -59,14 +57,14 @@ h1 {
 
 </style>
 
-<script>
+<script language="javascript" type="text/javascript">
 function sendEmail() {
     var email = 'roseying@umd.edu';
     var subject = document.getElementById('subject').value;
     var message = document.getElementById('message').value;
     var name = document.getElementById('name').value;
 
-    var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message + name;
+    var mailto_link = 'mailto:' + email + '?subject=' + subject + '&body=' + message;
 
         win = window.open(mailto_link, 'emailWindow');
         if (win && win.open && !win.closed) win.close();
@@ -81,10 +79,11 @@ document.getElementById('sender').addEventListener("click", sendEmail);
 <h1>Tell Provost Rice: Graduate Workers Deserve A Union!</h1>
 <form>
 <p>
+<b>Subject:</b><br>
 <input class="user_input" type="text" id="subject" value="Graduate Workers Deserve A Union!">
 
 <p>
-
+<b>Message:</b><br>
 <textarea class="user_input2" type="text" id="message" rows="4" cols="50">Dear Provost Rice,
 
 I was disappointed to learn that graduate workers at Maryland are unable to form a university-recognized union, and that you personally have testified to the Maryland state assembly against union recognition. This is deeply shameful and hypocritical for a university that prides itself on “advancing the public good” and “investing in people and communities.”
@@ -105,7 +104,7 @@ Respectfully,
 <button class="button">Send email!</button>
 </div>
 
-<a href={'mailto_link'} >
+<a href='#' onclick='sendEmail()' >
   <button>Click To Accept</button>
 </a>
 
