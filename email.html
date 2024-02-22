@@ -73,6 +73,7 @@ function sendEmail() {
     }
 
 document.getElementById('sender').addEventListener("click", sendEmail);
+
 </script>
 
 </head>
@@ -96,11 +97,13 @@ Respectfully,
 </textarea>
 </p>
 
+<p>
 <input class="user_input" type="text" id="name" placeholder="Your name" required/>
-  
+</p>
 
-<button class="button" id="sender">Send email</button>
-</a>
+<div id ="sender">
+<button class="button">Send email!</button>
+</div>
 
 </form>
 
