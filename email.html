@@ -21,6 +21,15 @@ h1 {
   text-align:center;
 }
 
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: maroon;
+  text-align:center;
+  margin: 0px;
+}
+
+
 .button{
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -35,7 +44,7 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   display: block;
-  margin: 50px auto;
+  margin: 10px auto;
   padding-left: 10px;
   border-radius: 5px;
   border: 2px solid rgb(255,194,0);
@@ -46,8 +55,9 @@ h1 {
 .user_input2{
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  white-space: pre-wrap; 	
   display: block;
-  margin: 50px auto;
+  margin: 10px auto;
   padding-left: 10px;
   border-radius: 5px;
   border: 2px solid rgb(255,194,0);
@@ -79,11 +89,11 @@ document.getElementById('sender').addEventListener("click", sendEmail);
 <h1>Tell Provost Rice: Graduate Workers Deserve A Union!</h1>
 <form>
 <p>
-<b>Subject:</b><br>
+<h2>Subject:</h2><br>
 <input class="user_input" type="text" id="subject" value="Graduate Workers Deserve A Union!">
 
 <p>
-<b>Message:</b><br>
+<h2>Message:</h2><br>
 <textarea class="user_input2" type="text" id="message" rows="4" cols="50">Dear Provost Rice,
 
 I was disappointed to learn that graduate workers at Maryland are unable to form a university-recognized union, and that you personally have testified to the Maryland state assembly against union recognition. This is deeply shameful and hypocritical for a university that prides itself on “advancing the public good” and “investing in people and communities.”
